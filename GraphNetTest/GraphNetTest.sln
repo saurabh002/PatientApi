@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphNetTest.WebAPI", "GraphNetTest.WebAPI\GraphNetTest.WebAPI.csproj", "{D5FF9C3E-B537-4B37-B4EA-06E28FEFC0EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphNetTest.WebAPI.Tests", "GraphNetTest.WebAPI.Tests\GraphNetTest.WebAPI.Tests.csproj", "{4F481E49-DC46-48D3-8BC3-A6EB0B6174E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphNetTest.Model", "GraphNetTest.Model\GraphNetTest.Model.csproj", "{C62C039D-1D2E-4560-BE1D-BF753B7CCF8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphNetTest.Data", "GraphNetTest.Data\GraphNetTest.Data.csproj", "{ED75C0A7-D2B7-495A-891D-A821122FF8AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphNetTest.BusinessServices", "GraphNetTest.BusinessServices\GraphNetTest.BusinessServices.csproj", "{4CC6837F-0E1F-4547-B1CF-EDA5356499EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphNetTest.ClientApp", "GraphNetTest.ClientApp\GraphNetTest.ClientApp.csproj", "{6FF25893-671D-4BBF-AECE-8BC3CF9492A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5FF9C3E-B537-4B37-B4EA-06E28FEFC0EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5FF9C3E-B537-4B37-B4EA-06E28FEFC0EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5FF9C3E-B537-4B37-B4EA-06E28FEFC0EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5FF9C3E-B537-4B37-B4EA-06E28FEFC0EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F481E49-DC46-48D3-8BC3-A6EB0B6174E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F481E49-DC46-48D3-8BC3-A6EB0B6174E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F481E49-DC46-48D3-8BC3-A6EB0B6174E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F481E49-DC46-48D3-8BC3-A6EB0B6174E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C62C039D-1D2E-4560-BE1D-BF753B7CCF8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C62C039D-1D2E-4560-BE1D-BF753B7CCF8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C62C039D-1D2E-4560-BE1D-BF753B7CCF8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C62C039D-1D2E-4560-BE1D-BF753B7CCF8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED75C0A7-D2B7-495A-891D-A821122FF8AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED75C0A7-D2B7-495A-891D-A821122FF8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED75C0A7-D2B7-495A-891D-A821122FF8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED75C0A7-D2B7-495A-891D-A821122FF8AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CC6837F-0E1F-4547-B1CF-EDA5356499EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CC6837F-0E1F-4547-B1CF-EDA5356499EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CC6837F-0E1F-4547-B1CF-EDA5356499EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CC6837F-0E1F-4547-B1CF-EDA5356499EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FF25893-671D-4BBF-AECE-8BC3CF9492A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FF25893-671D-4BBF-AECE-8BC3CF9492A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FF25893-671D-4BBF-AECE-8BC3CF9492A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FF25893-671D-4BBF-AECE-8BC3CF9492A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "AddPatient";
+}
+
+<h2>Add Patient</h2>
+
+<div>
+    <hr />
+    <div class="form-group">
+        <label for="name" class="control-label col-md-2">First Name:</label>
+        <div class="col-md-10">
+            <input type="text" title="FirstName" id="FirstName" class="form-control" />
+            <span id="FirstNameMsg" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="control-label col-md-2">Last Name:</label>
+        <div class="col-md-10">
+            <input type="text" title="LastName" id="LastName" class="form-control" />
+            <span id="LastNameMsg" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="control-label col-md-2">Gender:</label>
+        <div class="col-md-10">
+            <select name="Gender" title="Gender" id="Gender" class="form-control">
+                <option value="SelectGender" selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <span id="GenderMsg" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="control-label col-md-2">Date of birth:</label>
+        <div class="col-md-10">
+            <input type="date" title="DateOfBirth" id="DateOfBirth" class="form-control" />
+            <span id="DateofBirthMsg" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="control-label col-md-2">Home Number:</label>
+        <div class="col-md-10">
+            <input type="text" title="HomeNumber" id="HomeNumber" class="form-control" />
+            <span id="HomeNumberMsg" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="control-label col-md-2">Work Number:</label>
+        <div class="col-md-10">
+            <input type="text" title="WorkNumber" id="WorkNumber" class="form-control" />
+            <span id="WorkNumberMsg" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="control-label col-md-2">Mobile Number:</label>
+        <div class="col-md-10">
+            <input type="text" title="MobileNumber" id="MobileNumber" class="form-control" />
+            <span id="MobileNumberMsg" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save Data" class="btn btn-default" onclick="SubmitForm()" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <span id="ResponseMsg" style="color:darkblue; font-size:x-large"></span>
+        </div>
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Patient list", "Index", "Patient")
+</div>
+
+
+}
+

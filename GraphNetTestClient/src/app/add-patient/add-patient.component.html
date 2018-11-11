@@ -1,0 +1,75 @@
+<div class="col-md-6">
+  <h4 class="text-center">Add Patient</h4>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="PatientId">PatientId:</label>
+      <input  formControlName="PatientId" placeholder="Patient Id" name="PatientId" class="form-control" 
+      [ngClass]="{ 'is-invalid': submitted && f.PatientId.errors }"  id="PatientId">
+      <div *ngIf="submitted && f.PatientId.errors" class="invalid-feedback">
+          <div *ngIf="f.PatientId.errors.required">Patient Id is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="FirstName">First Name:</label>
+      <input formControlName="FirstName" placeholder="First Name" name="FirstName" class="form-control" id="FirstName"
+      [ngClass]="{ 'is-invalid': submitted && f.FirstName.errors }">
+      <div *ngIf="submitted && f.FirstName.errors" class="invalid-feedback">
+          <div *ngIf="f.FirstName.errors.required">First name is required</div>
+          <div *ngIf="f.FirstName.hasError('minLength')">Minimum char should be 3</div>
+          <div *ngIf="f.FirstName.errors.maxLength">Maximum char allowed is 50</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label for="LastName">Last Name:</label>
+        <input formControlName="LastName" placeholder="Last name" name="LastName" class="form-control" 
+        [ngClass]="{ 'is-invalid': submitted && f.LastName.errors }" id="LastName">
+        <div *ngIf="submitted && f.FirstName.errors" class="invalid-feedback">
+            <div *ngIf="f.LastName.errors.required">Last name is required</div>
+            <div *ngIf="f.LastName.hasError('minLength')">Minimum char should be 3</div>
+            <div *ngIf="f.LastName.errors.maxLength">Maximum char allowed is 50</div>
+        </div>
+      </div>
+      <div class="form-group">
+          <label for="Gender">Gender:</label>
+    
+          <select formControlName="Gender" placeholder="Select" name="Gender" class="form-control">
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          <!-- <input formControlName="Gender" placeholder="Gender" name="Gender" class="form-control" id="Gender"> -->
+        </div>
+        <div class="form-group">
+            <label for="DateOfBirth">Date of birth:</label>
+            <!-- <input formControlName="DateOfBirth" placeholder="Dob" name="DateOfBirth" class="form-control" id="DateOfBirth"> -->
+            <input class="form-control lhttt" (change)="validateDOB(DateOfBirth)" type="date" 
+            name="DateOfBirth" formControlName="DateOfBirth" placeholder="Date Of Birth">
+          </div>
+      <div class="form-group" formGroupName="Phone"> 
+          <label for="HomePhone">Home phone:</label>
+          <input formControlName="HomePhone" placeholder="Home Phone" min=0 max=10  class="form-control" 
+          [ngClass]="{ 'is-invalid': submitted && f['Phone'].controls['HomePhone'].errors }" id="HomePhone">
+          <div *ngIf="submitted && f['Phone'].controls['HomePhone'].errors" class="invalid-feedback">
+              <div *ngIf="f['Phone'].controls['HomePhone'].errors.pattern">Phone number is not valid</div>
+          </div>
+        </div>
+        <div class="form-group" formGroupName="Phone"> 
+            <label for="WorkPhone">Work Phone:</label>
+            <input formControlName="WorkPhone" placeholder="Work Phone"  class="form-control" 
+            [ngClass]="{ 'is-invalid': submitted && f['Phone'].controls['WorkPhone'].errors }">
+            <div *ngIf="submitted && f['Phone'].controls['WorkPhone'].errors" class="invalid-feedback">
+                <div *ngIf="f['Phone'].controls['WorkPhone'].errors.pattern">Phone number is not valid</div>
+          </div>
+        </div>
+          <div class="form-group" formGroupName="Phone"> 
+              <label for="CellPhone">Cell Phone:</label>
+              <input formControlName="CellPhone" placeholder="Cell Phone"  class="form-control" 
+              [ngClass]="{ 'is-invalid': submitted && f['Phone'].controls['CellPhone'].errors }">
+              <div *ngIf="submitted && f['Phone'].controls['CellPhone'].errors" class="invalid-feedback">
+                  <div *ngIf="f['Phone'].controls['CellPhone'].errors.pattern">Phone number is not valid</div>
+            </div>
+          </div>
+    <button class="btn btn-success">Save</button>
+  </form>
+</div>

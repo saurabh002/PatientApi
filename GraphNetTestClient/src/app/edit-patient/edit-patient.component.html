@@ -1,0 +1,45 @@
+<div class="col-md-6">
+    <h2 class="text-center">Edit User1</h2>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="PatientId">PatientId:</label>
+              <input  formControlName="PatientId" disabled="disabled" placeholder="Patient Id" name="PatientId" class="form-control" id="PatientId">
+            </div>
+        
+            <div class="form-group">
+              <label for="FirstName">First Name:</label>
+              <input formControlName="FirstName" placeholder="First Name" name="FirstName" class="form-control" id="FirstName">
+            </div>
+        
+            <div class="form-group">
+              <label for="LastName">Last Name:</label>
+              <input formControlName="LastName" placeholder="Last Name" name="LastName" class="form-control" id="LastName">
+            </div>
+            <div class="form-group">
+                <label for="Gender">Gender:</label>
+                <select formControlName="Gender" placeholder="Select" name="Gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                <!-- <input formControlName="Gender" placeholder="Gender" name="Gender" class="form-control" id="Gender"> -->
+            </div>
+            <div class="form-group">
+                  <label for="DateOfBirth">Date of birth:</label>
+                  <input formControlName="DateOfBirth" placeholder="Dob" name="DateOfBirth" class="form-control" id="DateOfBirth">
+            </div>
+            <div class="form-group" formGroupName="Phone"> 
+                <label for="HomePhone">Home phone:</label>
+                <input formControlName="HomePhone" placeholder="Home Phone"  class="form-control" >
+              </div>
+              <div class="form-group" formGroupName="Phone"> 
+                  <label for="WorkPhone">Work Phone:</label>
+                  <input formControlName="WorkPhone" placeholder="Work Phone"  class="form-control" >
+                </div>
+                <div class="form-group" formGroupName="Phone"> 
+                    <label for="CellPhone">Cell Phone:</label>
+                    <input formControlName="CellPhone" placeholder="Cell Phone"  class="form-control" >
+                  </div>
+            <button class="btn btn-success">Update</button>
+          </form>
+  </div>
+  
