@@ -19,38 +19,67 @@ namespace GraphNetTest.WebAPI.Controllers
         [HttpGet]
         public IEnumerable<Patient> GetAll()
         {
-            return this._patientService.GetPatients();
+			try{
+				return this._patientService.GetPatients();
+			}
+			catch(Exception)
+			{
+				throw
+			}
         }
 
         //Get patient by id
         [HttpGet]
         public Patient Get(string id)
         {
+			try{
             return this._patientService.GetPatient(id);
+			}
+			catch(Exception)
+			{
+				throw;
+			}
         }
 
         //Add new patient
         [HttpPost]
         public IHttpActionResult Add(Patient p)
         {
-            int response =this._patientService.AddPatient(p);
-            if (response == -1)
-                return Conflict();
-            else
-                return Ok("Data posted successfully");
+			try{
+				int response =this._patientService.AddPatient(p);
+				if (response == -1)
+					return Conflict();
+				else
+					return Ok("Data posted successfully
+				}
+			catch(Exception){
+				throw;
+			}
         }
 
         //update patient record
         [HttpPut]
         public void Update(Patient p)
         {
-            this._patientService.UpdatePatient(p);
+			try{
+				this._patientService.UpdatePatient(p);
+			}
+			catch(Exception)
+			{
+				throw;
+			}
         }
 
         //delete patient record
         public void Delete(Patient p)
         {
-            this._patientService.DeletePatient(p);
+			try{
+				this._patientService.DeletePatient(p);
+			}
+			catch(Exception)
+			{
+				throw;
+			}
         }
     }
 }
